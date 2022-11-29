@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class LogicaEnemigo : MonoBehaviour
 {
-    public int hp;
-    public int damageEspada;
+    public float vidaEnemigo = 50f;
 
-    private void OnTriggerEnter(Collider other) 
+    void Update() 
     {
-        if (other.gameObject.tag == "Espada")
-        {
-            hp -= damageEspada;
-        }
-
-        if (hp <= 0)
+        if(vidaEnemigo <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("Player")) 
+        {
+            Debug.Log("Le has dado a un enemigo");
+        }  
     }
 }

@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Movimiento Player
 
+    public GameObject enemy;
     public float velocidadRotacion = 200.0f;
     public float velocidadMovimiento = 5.0f;
     private Animator anim;
@@ -62,11 +63,11 @@ public class PlayerMovement : MonoBehaviour
         Attack = false;
     }
 
-    void OnTriggerEnter(Collider coll)
+    public void OnTriggerEnter(Collider col)
     {
-        if(coll.CompareTag("arma"))
+        if (col.transform.tag == "Enemy")
         {
-            Debug.Log("Has sufrido daño");
+            enemy.GetComponent<LogicaEnemigo>().vidaEnemigo -= 5;
         }
     }
 }
