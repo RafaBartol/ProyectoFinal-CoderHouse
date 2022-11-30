@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
     // Movimiento Player
 
-    public GameObject enemy;
     public float velocidadRotacion = 200.0f;
     public float velocidadMovimiento = 5.0f;
     private Animator anim;
@@ -18,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool Attack;
     public bool conArma;
+    public GameObject enemigo;
     
     void Start()
     {
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.transform.tag == "Enemy")
         {
-            enemy.GetComponent<LogicaEnemigo>().vidaEnemigo -= 5;
+            enemigo.GetComponent<Skeletons>().vidaEnemigo -= 5;
         }
     }
 }

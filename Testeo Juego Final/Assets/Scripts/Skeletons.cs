@@ -13,6 +13,8 @@ public class Skeletons : MonoBehaviour
     public GameObject target;
     public bool atacando;
 
+    public float vidaEnemigo = 50f;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -22,11 +24,16 @@ public class Skeletons : MonoBehaviour
     void Update() 
     {
         Comportamiento_Enemigo();
+
+        if(vidaEnemigo <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Comportamiento_Enemigo()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 15)
+        if (Vector3.Distance(transform.position, target.transform.position) > 5)
         {
             anim.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
@@ -84,5 +91,13 @@ public class Skeletons : MonoBehaviour
     {
         anim.SetBool("attack", false);
         atacando = false;
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("Player")) 
+        {
+            Debug.Log("Le has dado a un enemigo");
+        }  
     }
 }
