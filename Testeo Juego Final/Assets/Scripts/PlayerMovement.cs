@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Vida
+
+    public int VidaJugador = 100;
+    
     // Movimiento Player
 
-    public GameObject enemy;
-    public float velocidadRotacion = 200.0f;
-    public float velocidadMovimiento = 5.0f;
+    public int velocidadRotacion = 200;
+    public int velocidadMovimiento = 5;
     private Animator anim;
     public float x, y;
 
@@ -18,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool Attack;
     public bool conArma;
+    public int dañoPlayer = 5;
+    public GameObject [] enemigos;
     
     void Start()
     {
@@ -67,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.transform.tag == "Enemy")
         {
-            enemy.GetComponent<LogicaEnemigo>().vidaEnemigo -= 5;
+            col.transform.gameObject.GetComponent<Skeletons>().vidaEnemigo -= dañoPlayer;
         }
     }
 }
