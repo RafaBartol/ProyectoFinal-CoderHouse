@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Skeletons : MonoBehaviour
@@ -12,8 +10,11 @@ public class Skeletons : MonoBehaviour
 
     public GameObject target;
     public bool atacando;
+    public int dañoEsqueleto = 5;
 
-    public float vidaEnemigo = 50f;
+    public GameObject Player;
+
+    public int vidaEnemigo = 50;
 
     void Start()
     {
@@ -27,13 +28,14 @@ public class Skeletons : MonoBehaviour
 
         if(vidaEnemigo <= 0)
         {
+            Score.EnemiesDead++;
             Destroy(gameObject);
         }
     }
 
     public void Comportamiento_Enemigo()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 5)
+        if (Vector3.Distance(transform.position, target.transform.position) > 10)
         {
             anim.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
@@ -97,7 +99,7 @@ public class Skeletons : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
         {
-            Debug.Log("Le has dado a un enemigo");
+            other.transform.gameObject.GetComponent<PlayerMovement>().VidaJugador -= dañoEsqueleto;
         }  
     }
 }
