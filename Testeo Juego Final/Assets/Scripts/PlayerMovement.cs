@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Vida
 
-    public int VidaJugador = 100;
+    public int VidaJugador = 50;
     
     // Movimiento Player
 

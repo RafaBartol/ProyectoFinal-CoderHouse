@@ -35,7 +35,7 @@ public class Skeletons : MonoBehaviour
 
     public void Comportamiento_Enemigo()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 10)
+        if (Vector3.Distance(transform.position, target.transform.position) > 15)
         {
             anim.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
