@@ -10,11 +10,12 @@ public class Skeletons : MonoBehaviour
 
     public GameObject target;
     public bool atacando;
-    public int dañoEsqueleto = 5;
 
     public GameObject Player;
+    public GameObject Esfera;
+    public Transform SpawnEsfera;
 
-    public int vidaEnemigo = 50;
+    public int vidaEsqueleto = 15;
 
     void Start()
     {
@@ -26,10 +27,11 @@ public class Skeletons : MonoBehaviour
     {
         Comportamiento_Enemigo();
 
-        if(vidaEnemigo <= 0)
+        if(vidaEsqueleto <= 0)
         {
             Score.EnemiesDead++;
             Destroy(gameObject);
+            GameObject esfera = Instantiate(Esfera, SpawnEsfera.position, transform.rotation);
         }
     }
 
@@ -93,13 +95,5 @@ public class Skeletons : MonoBehaviour
     {
         anim.SetBool("attack", false);
         atacando = false;
-    }
-
-    private void OnTriggerEnter(Collider other) 
-    {
-        if (other.CompareTag("Player")) 
-        {
-            other.transform.gameObject.GetComponent<PlayerMovement>().VidaJugador -= dañoEsqueleto;
-        }  
     }
 }

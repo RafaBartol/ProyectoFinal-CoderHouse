@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Vida
 
-    public int VidaJugador = 50;
+    public int VidaJugador = 20;
     
     // Movimiento Player
 
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool Attack;
     public bool conArma;
-    public int dañoPlayer = 5;
+    public int dañoPlayer = 2;
     public GameObject [] enemigos;
     
     void Start()
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.transform.tag == "Enemy")
         {
-            col.transform.gameObject.GetComponent<Skeletons>().vidaEnemigo -= dañoPlayer;
+            col.transform.gameObject.GetComponent<Skeletons>().vidaEsqueleto -= dañoPlayer;
         }
     }
 }

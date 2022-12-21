@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - Buffo
+  - Enemy
+  - Espada
+  - Souls
+  - Orbs
   layers:
   - Default
   - TransparentFX
