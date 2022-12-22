@@ -1,16 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AbrirPuerta : MonoBehaviour
 {
-    public GameObject puerta1;
-    public GameObject puerta2;
-    public GameObject puerta3;
-    public GameObject puerta4;
-    public GameObject puerta5;
-    public GameObject puerta6;
-
+    public GameObject puerta1;  
+    public GameObject puerta2;  
+    
     void Update()
     {
         abrirPuerta();
@@ -18,9 +12,10 @@ public class AbrirPuerta : MonoBehaviour
 
     void abrirPuerta()
     {
-        if (Score.EnemiesDead == 1 && Score.SoulsRecolected == 1 && Score.Orbs == 1)
+        if (Score.Orbs == 1)
         {
             puerta1.SetActive(false);
+            puerta2.SetActive(false);
         }
     }
 }

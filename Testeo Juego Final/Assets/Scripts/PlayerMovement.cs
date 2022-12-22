@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Vida
 
-    public int VidaJugador = 20;
+    public float VidaJugador = 20f;
     
     // Movimiento Player
 
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool Attack;
     public bool conArma;
-    public int dañoPlayer = 2;
+    public float dañoPlayer = 2f;
     public GameObject [] enemigos;
     
     void Start()

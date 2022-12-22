@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class LogicaBuffos : MonoBehaviour
 {
@@ -10,7 +8,6 @@ public class LogicaBuffos : MonoBehaviour
 
     // 1 = aumento daño
     // 2 = aumento vida
-    // 3 = aumento velocidad
 
     void Start() 
     {
@@ -22,15 +19,11 @@ public class LogicaBuffos : MonoBehaviour
         switch(tipo)
         {
             case 1:
-            playerMovement.dañoPlayer += 2;
+            playerMovement.dañoPlayer += 0.1f;
             break;
 
             case 2:
-            playerMovement.VidaJugador += 20;
-            break;
-
-            case 3:
-            playerMovement.velocidadMovimiento += 5;
+            playerMovement.VidaJugador += 10f;
             break;
 
             default:

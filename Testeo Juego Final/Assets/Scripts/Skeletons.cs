@@ -14,8 +14,7 @@ public class Skeletons : MonoBehaviour
     public GameObject Player;
     public GameObject Esfera;
     public Transform SpawnEsfera;
-
-    public int vidaEsqueleto = 15;
+    public float vidaEsqueleto = 15f;
 
     void Start()
     {

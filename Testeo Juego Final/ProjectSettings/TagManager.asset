@@ -10,6 +10,9 @@ TagManager:
   - Espada
   - Souls
   - Orbs
+  - AlmasMenores
+  - CerrarPuerta
+  - EsferaMaestra
   layers:
   - Default
   - TransparentFX
