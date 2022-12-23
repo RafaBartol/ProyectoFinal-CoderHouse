@@ -55,11 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !Attack)
         {
-            if (conArma)
-            {
-                anim.SetTrigger("SwordAttack");
-                Attack = true;
-            }
+            anim.SetTrigger("SwordAttack");
+            Attack = true;
         }
     }
 
