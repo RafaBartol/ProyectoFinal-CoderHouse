@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 22ce6fc44fc927945ad0ccbfed44a6fb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - PR Astro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ef54b327673e5244fbccb3afa234f898, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

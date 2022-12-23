@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b6d0b8f81c95fe04eb8218f3b9446770
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Go around the books 2022
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: dc3d55e2b9d119d4aab11df4c72eefc2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
