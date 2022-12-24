@@ -1,11 +1,6 @@
 using UnityEngine;
-
 public class PlayerMovement : MonoBehaviour
-{
-    // Vida
-
-    public float VidaJugador = 20f;
-    
+{   
     // Movimiento Player
 
     public int velocidadRotacion = 200;
@@ -27,9 +22,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     void FixedUpdate() 

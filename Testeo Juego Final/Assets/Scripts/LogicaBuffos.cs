@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LogicaBuffos : MonoBehaviour
 {
+    public BarraVida barraVida;
     public PlayerMovement playerMovement;
 
     public int tipo;
@@ -11,6 +12,7 @@ public class LogicaBuffos : MonoBehaviour
 
     void Start() 
     {
+        barraVida = GameObject.FindGameObjectWithTag("Player").GetComponent<BarraVida>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
@@ -23,9 +25,9 @@ public class LogicaBuffos : MonoBehaviour
             break;
 
             case 2:
-            playerMovement.VidaJugador += 10f;
+            barraVida.vidaActual += 10f;
             break;
-
+            
             default:
             Debug.Log("No hay efecto");
             break;

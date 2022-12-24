@@ -12,7 +12,7 @@ public class AbrirPuerta : MonoBehaviour
 
     void abrirPuerta()
     {
-        if (Score.Orbs == 1)
+        if (Score.Orbs == 7)
         {
             puerta1.SetActive(false);
             puerta2.SetActive(false);
