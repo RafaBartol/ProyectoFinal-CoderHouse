@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
+<<<<<<< Updated upstream
     void Start()
     {
         
@@ -20,5 +21,16 @@ public class WinCondition : MonoBehaviour
         {
             Debug.Log("Has ganado");
         }
+=======
+    [SerializeField] private GameObject MenuWin;
+
+    private void Update() 
+    {
+        if (Score.Orbs == 9 && Score.SoulsRecolected == 13)
+        {
+            Time.timeScale = 0f;
+            MenuWin.SetActive(true);
+        }   
+>>>>>>> Stashed changes
     }
 }
